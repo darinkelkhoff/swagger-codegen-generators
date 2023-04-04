@@ -6,7 +6,8 @@
   - Build date: {{generatedDate}}
 {{/hideGenerationTimestamp}}
 
-{{#appDescription}}{{{appDescription}}}{{/appDescription}}
+{{#unescapedAppDescription}}{{{.}}}{{/unescapedAppDescription}}
+{{^unescapedAppDescription}}{{#appDescription}}{{{.}}}{{/appDescription}}{{/unescapedAppDescription}}
 
 {{#infoUrl}}
   For more information, please visit [{{{infoUrl}}}]({{{infoUrl}}})
